@@ -1,9 +1,5 @@
-com/mn/khanbank/alertmanagerwebhook/restintegration/SmsIntegrationService.class
-com/mn/khanbank/alertmanagerwebhook/model/AlertModel.class
-com/mn/khanbank/alertmanagerwebhook/service/WebhookService.class
-com/mn/khanbank/alertmanagerwebhook/util/SmsConstant.class
 com/mn/khanbank/alertmanagerwebhook/AlertmanagerWebhookApplication.class
-com/mn/khanbank/alertmanagerwebhook/model/SmsModel.class
 com/mn/khanbank/alertmanagerwebhook/controller/WebhookController.class
 com/mn/khanbank/alertmanagerwebhook/model/Response.class
+com/mn/khanbank/alertmanagerwebhook/model/AlertModel.class
 com/mn/khanbank/alertmanagerwebhook/model/AlertWebhookModel.class
