@@ -14,5 +14,11 @@ public class AlertModel {
 	private Object endsAt;
 	private String generatorURL;
 	private String fingerprint;
+	public Map<String, String> getAnnotations() {
+		return annotations;
+	}
+	public void setAnnotations(Map<String, String> annotations) {
+		this.annotations = annotations;
+	}
 
 }

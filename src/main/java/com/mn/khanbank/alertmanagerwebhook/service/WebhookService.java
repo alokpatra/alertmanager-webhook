@@ -31,7 +31,7 @@ public class WebhookService {
 		{
 			List<String> mobileNumberList = smsReceiver.get("alerts-common");
 			mobileNumberList.stream().forEach(moibleNumer -> {
-				SmsModel smsmodel = new SmsModel(1,moibleNumer,message);
+				SmsModel smsmodel = new SmsModel(1,moibleNumer,"PING PONG");
 				smsint.sendMessage(smsmodel);					
 			});
 		}
