@@ -1,48 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
 
-<pluginGroups></pluginGroups>
-<proxies></proxies>
-<mirrors>
-       <mirror>
-                <id>artifact-khanbank-local-defaultcollection-maven-central</id>
-                <name>Khan Bank External Repository Manager running on artifact.khanbank.local</name>
-                <url>https://artifact.khanbank.local/DefaultCollection/_packaging/maven-central/maven/v1</url>
-		<mirrorOf>central</mirrorOf>
-        </mirror>
-</mirrors>
-<servers>
-        <server>
-          <id>devops-developers-utility</id>
-          <configuration>
-            <httpHeaders>
-              <property>
-		<name>Authorization</name>
-        <!-- Treat this auth token like a password. Do not share it with anyone, including Microsoft support. -->
-        <!-- The generated token expires on or before 08/09/2021 -->
-        <value>Basic YXp1cmVBcnRpZmFjdHNBY2Nlc3NUb2tlbjpleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpTVXpJMU5pSXNJbmcxZENJNkltVlVURFJFZEZoT1QxQm5kM0I2VURSVWNWRmlSRjlaUm5CbVp5SjkuZXlKdVlXMWxhV1FpT2lKbE5qQTRPVFkwTVMwd1l6WXhMVFExWkdRdFlqZzNOQzFqWVRFME56bGxZalF5TURNaUxDSnpZM0FpT2lKMmMyOHVaSEp2Y0Y5M2NtbDBaU0IyYzI4dWNHRmphMkZuYVc1blgzZHlhWFJsSWl3aVlYVnBJam9pTXpBMFl6ZGhOV1V0WVRrNE15MDBNVE01TFdJNE1qTXRZalkxWVdVeFpqVmtNVGxoSWl3aWMybGtJam9pTURJeVpUTTFNek10Wm1VellTMDBaR1JpTFdFMFptTXROakV5WW1abU1HVTNNemhpSWl3aWFYTnpJam9pWVRZM01URmpZV0V0Wm1ZMFlTMDBaV05rTFRoa05qZ3RPVFEwTkRVeFpEVTNNbUV6SWl3aVlYVmtJam9pWVRZM01URmpZV0V0Wm1ZMFlTMDBaV05rTFRoa05qZ3RPVFEwTkRVeFpEVTNNbUV6SWl3aWJtSm1Jam94TmpJek1qazJOak0wTENKbGVIQWlPakUyTXpFd056TXlNelI5LmhsZEk4MS14UUFMVTR0TVh0TEZXb0c3MkFjdTZOR1lFLU9ZOUF5QjRXMW0tUlpHcjFTZHoxOXpXTlFZTFh1MEcxRllES1pocm84QXRBTTh3SzM4QXJITHlhV0tNZzRyaDQ2cHJlVm0tMkxNUFh3eEhqamNnblFQNkxucUZPQnk1b2tOLXoxaGVtbUl5OUJfY2Vla20td1FMcGt3UzctNlF3WXo4SVh5LXZqdFRJeHBEZFhEaEpSSlRPSFFhc1o4WGtOd1FhNzQ5a1RaUHFiV3ZGZVV0LUVDdmVoMklXSDlrUjZnX2JlTjVXV3QwYnNDckxYRmp2bEVFSGVnSzRiNHNqQWIyUnR4dEFidHl4VDNnOExWRng1Q1RfRFNWMkdYQVB1VnFFOXVVbEY0R1I0YlJUU3lQeDZyQTUybW1nUmFfdVYyMzdMODAxcHdxRlRscWtlRTFMdw==</value>
-              </property>
-            </httpHeaders>
-          </configuration>
-        </server>
-        <server>
-          <id>khanbank-developers</id>
-          <configuration>
-            <httpHeaders>
-              <property>
-  		<name>Authorization</name>
-        <!-- Treat this auth token like a password. Do not share it with anyone, including Microsoft support. -->
-        <!-- The generated token expires on or before 08/09/2021 -->
-        <value>Basic YXp1cmVBcnRpZmFjdHNBY2Nlc3NUb2tlbjpleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpTVXpJMU5pSXNJbmcxZENJNkltVlVURFJFZEZoT1QxQm5kM0I2VURSVWNWRmlSRjlaUm5CbVp5SjkuZXlKdVlXMWxhV1FpT2lKbE5qQTRPVFkwTVMwd1l6WXhMVFExWkdRdFlqZzNOQzFqWVRFME56bGxZalF5TURNaUxDSnpZM0FpT2lKMmMyOHVaSEp2Y0Y5M2NtbDBaU0IyYzI4dWNHRmphMkZuYVc1blgzZHlhWFJsSWl3aVlYVnBJam9pTXpBMFl6ZGhOV1V0WVRrNE15MDBNVE01TFdJNE1qTXRZalkxWVdVeFpqVmtNVGxoSWl3aWMybGtJam9pTURJeVpUTTFNek10Wm1VellTMDBaR1JpTFdFMFptTXROakV5WW1abU1HVTNNemhpSWl3aWFYTnpJam9pWVRZM01URmpZV0V0Wm1ZMFlTMDBaV05rTFRoa05qZ3RPVFEwTkRVeFpEVTNNbUV6SWl3aVlYVmtJam9pWVRZM01URmpZV0V0Wm1ZMFlTMDBaV05rTFRoa05qZ3RPVFEwTkRVeFpEVTNNbUV6SWl3aWJtSm1Jam94TmpJek1qazJOak0wTENKbGVIQWlPakUyTXpFd056TXlNelI5LmhsZEk4MS14UUFMVTR0TVh0TEZXb0c3MkFjdTZOR1lFLU9ZOUF5QjRXMW0tUlpHcjFTZHoxOXpXTlFZTFh1MEcxRllES1pocm84QXRBTTh3SzM4QXJITHlhV0tNZzRyaDQ2cHJlVm0tMkxNUFh3eEhqamNnblFQNkxucUZPQnk1b2tOLXoxaGVtbUl5OUJfY2Vla20td1FMcGt3UzctNlF3WXo4SVh5LXZqdFRJeHBEZFhEaEpSSlRPSFFhc1o4WGtOd1FhNzQ5a1RaUHFiV3ZGZVV0LUVDdmVoMklXSDlrUjZnX2JlTjVXV3QwYnNDckxYRmp2bEVFSGVnSzRiNHNqQWIyUnR4dEFidHl4VDNnOExWRng1Q1RfRFNWMkdYQVB1VnFFOXVVbEY0R1I0YlJUU3lQeDZyQTUybW1nUmFfdVYyMzdMODAxcHdxRlRscWtlRTFMdw==</value>
-              </property>
-            </httpHeaders>
-          </configuration>
-        </server>
-</servers>
-<profiles>
+	<pluginGroups></pluginGroups>
+	<proxies></proxies>
+	<mirrors>
+		<mirror>
+			<id>artifact-khanbank-local-defaultcollection-maven-central</id>
+			<name>Khan Bank External Repository Manager running on artifact.khanbank.local</name>
+			<url>https://artifact.khanbank.local/DefaultCollection/_packaging/maven-central/maven/v1</url>
+			<mirrorOf>central</mirrorOf>
+		</mirror>
+	</mirrors>
+	<servers>
+		<server>
+			<id>devops-developers-utility</id>
+			<configuration>
+				<httpHeaders>
+					<property>
+						<name>Authorization</name>
+						<!-- Treat this auth token like a password. Do not share it with anyone, 
+							including Microsoft support. -->
+						<!-- The generated token expires on or before 08/09/2021 -->
+						<value>Basic
+							YXp1cmVBcnRpZmFjdHNBY2Nlc3NUb2tlbjpleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpTVXpJMU5pSXNJbmcxZENJNkltVlVURFJFZEZoT1QxQm5kM0I2VURSVWNWRmlSRjlaUm5CbVp5SjkuZXlKdVlXMWxhV1FpT2lKbE5qQTRPVFkwTVMwd1l6WXhMVFExWkdRdFlqZzNOQzFqWVRFME56bGxZalF5TURNaUxDSnpZM0FpT2lKMmMyOHVaSEp2Y0Y5M2NtbDBaU0IyYzI4dWNHRmphMkZuYVc1blgzZHlhWFJsSWl3aVlYVnBJam9pTXpBMFl6ZGhOV1V0WVRrNE15MDBNVE01TFdJNE1qTXRZalkxWVdVeFpqVmtNVGxoSWl3aWMybGtJam9pTURJeVpUTTFNek10Wm1VellTMDBaR1JpTFdFMFptTXROakV5WW1abU1HVTNNemhpSWl3aWFYTnpJam9pWVRZM01URmpZV0V0Wm1ZMFlTMDBaV05rTFRoa05qZ3RPVFEwTkRVeFpEVTNNbUV6SWl3aVlYVmtJam9pWVRZM01URmpZV0V0Wm1ZMFlTMDBaV05rTFRoa05qZ3RPVFEwTkRVeFpEVTNNbUV6SWl3aWJtSm1Jam94TmpJek1qazJOak0wTENKbGVIQWlPakUyTXpFd056TXlNelI5LmhsZEk4MS14UUFMVTR0TVh0TEZXb0c3MkFjdTZOR1lFLU9ZOUF5QjRXMW0tUlpHcjFTZHoxOXpXTlFZTFh1MEcxRllES1pocm84QXRBTTh3SzM4QXJITHlhV0tNZzRyaDQ2cHJlVm0tMkxNUFh3eEhqamNnblFQNkxucUZPQnk1b2tOLXoxaGVtbUl5OUJfY2Vla20td1FMcGt3UzctNlF3WXo4SVh5LXZqdFRJeHBEZFhEaEpSSlRPSFFhc1o4WGtOd1FhNzQ5a1RaUHFiV3ZGZVV0LUVDdmVoMklXSDlrUjZnX2JlTjVXV3QwYnNDckxYRmp2bEVFSGVnSzRiNHNqQWIyUnR4dEFidHl4VDNnOExWRng1Q1RfRFNWMkdYQVB1VnFFOXVVbEY0R1I0YlJUU3lQeDZyQTUybW1nUmFfdVYyMzdMODAxcHdxRlRscWtlRTFMdw==</value>
+					</property>
+				</httpHeaders>
+			</configuration>
+		</server>
+		<server>
+			<id>khanbank-developers</id>
+			<configuration>
+				<httpHeaders>
+					<property>
+						<name>Authorization</name>
+						<!-- Treat this auth token like a password. Do not share it with anyone, 
+							including Microsoft support. -->
+						<!-- The generated token expires on or before 08/09/2021 -->
+						<value>Basic
+							YXp1cmVBcnRpZmFjdHNBY2Nlc3NUb2tlbjpleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpTVXpJMU5pSXNJbmcxZENJNkltVlVURFJFZEZoT1QxQm5kM0I2VURSVWNWRmlSRjlaUm5CbVp5SjkuZXlKdVlXMWxhV1FpT2lKbE5qQTRPVFkwTVMwd1l6WXhMVFExWkdRdFlqZzNOQzFqWVRFME56bGxZalF5TURNaUxDSnpZM0FpT2lKMmMyOHVaSEp2Y0Y5M2NtbDBaU0IyYzI4dWNHRmphMkZuYVc1blgzZHlhWFJsSWl3aVlYVnBJam9pTXpBMFl6ZGhOV1V0WVRrNE15MDBNVE01TFdJNE1qTXRZalkxWVdVeFpqVmtNVGxoSWl3aWMybGtJam9pTURJeVpUTTFNek10Wm1VellTMDBaR1JpTFdFMFptTXROakV5WW1abU1HVTNNemhpSWl3aWFYTnpJam9pWVRZM01URmpZV0V0Wm1ZMFlTMDBaV05rTFRoa05qZ3RPVFEwTkRVeFpEVTNNbUV6SWl3aVlYVmtJam9pWVRZM01URmpZV0V0Wm1ZMFlTMDBaV05rTFRoa05qZ3RPVFEwTkRVeFpEVTNNbUV6SWl3aWJtSm1Jam94TmpJek1qazJOak0wTENKbGVIQWlPakUyTXpFd056TXlNelI5LmhsZEk4MS14UUFMVTR0TVh0TEZXb0c3MkFjdTZOR1lFLU9ZOUF5QjRXMW0tUlpHcjFTZHoxOXpXTlFZTFh1MEcxRllES1pocm84QXRBTTh3SzM4QXJITHlhV0tNZzRyaDQ2cHJlVm0tMkxNUFh3eEhqamNnblFQNkxucUZPQnk1b2tOLXoxaGVtbUl5OUJfY2Vla20td1FMcGt3UzctNlF3WXo4SVh5LXZqdFRJeHBEZFhEaEpSSlRPSFFhc1o4WGtOd1FhNzQ5a1RaUHFiV3ZGZVV0LUVDdmVoMklXSDlrUjZnX2JlTjVXV3QwYnNDckxYRmp2bEVFSGVnSzRiNHNqQWIyUnR4dEFidHl4VDNnOExWRng1Q1RfRFNWMkdYQVB1VnFFOXVVbEY0R1I0YlJUU3lQeDZyQTUybW1nUmFfdVYyMzdMODAxcHdxRlRscWtlRTFMdw==</value>
+					</property>
+				</httpHeaders>
+			</configuration>
+		</server>
+	</servers>
+	<profiles>
 		<profile>
 			<id>sonar</id>
 			<activation>
@@ -55,6 +59,6 @@
 				</sonar.host.url>
 			</properties>
 		</profile>
-</profiles>
+	</profiles>
 </settings>
 

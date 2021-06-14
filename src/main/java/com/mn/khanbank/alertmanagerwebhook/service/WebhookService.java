@@ -40,10 +40,10 @@ public class WebhookService {
 	public void sendMessage(AlertWebhookModel alertmodel) {
 		List<AlertModel> alertList = alertmodel.getAlerts();
 		String receiver = alertmodel.getReceiver()!=null?alertmodel.getReceiver():"";
-		if (Objects.nonNull(alertList) && smsReceiver.containsKey(receiver))
+		if (!Objects.isNull(alertList) && smsReceiver.containsKey(receiver))
 		{
 			alertList.stream().forEach(alert -> {
-				String message = alert.getAnnotations().containsKey("summary")?annotation.get("summary"):"Error Occured";
+				String message = alert.getAnnotations().containsKey("summary")?alert.getAnnotations().get("summary"):"Error Occured";
 				List<String> mobileNumberList = smsReceiver.get(receiver);
 				mobileNumberList.stream().forEach(moibleNumer -> {
 					SmsModel smsmodel = new SmsModel(1,moibleNumer,message);
