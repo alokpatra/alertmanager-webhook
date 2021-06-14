@@ -42,24 +42,18 @@ public class WebhookService {
 	}
 
 	public void sendMessage(AlertWebhookModel alertmodel) {
-		List<AlertModel> alert = alertmodel.getAlerts();
+		List<AlertModel> alertList = alertmodel.getAlerts();
 		String receiver = alertmodel.getReceiver()!=null?alertmodel.getReceiver():"";
-		if (Objects.nonNull(alert))
+		if (Objects.nonNull(alertList) && smsReceiver.containsKey(receiver))
 		{
-			Map<String, String> annotation = alert.getAnnotations();
-			if (smsReceiver.containsKey(receiver))
-			{
+			alertList.stream().forEach(alert -> {
+				String message = alert.getAnnotations().containsKey("summary")?annotation.get("summary"):"Error Occured";
 				List<String> mobileNumberList = smsReceiver.get(receiver);
-				for(String moibleNumer : mobileNumberList)
-				{
-					SmsModel smsmodel = new SmsModel();
-					smsmodel.setPriority(1);
-					smsmodel.setMessage("PING PONG");			
-					smsmodel.setMobile(moibleNumer);
-					smsint.sendMessage(smsmodel);
-				}
-			}
+				mobileNumberList.stream().forEach(moibleNumer -> {
+					SmsModel smsmodel = new SmsModel(1,moibleNumer,message);
+					smsint.sendMessage(smsmodel);					
+				});				
+			});
 		}
-
 	}
 }
