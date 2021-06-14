@@ -30,14 +30,10 @@ public class WebhookService {
 		if (smsReceiver.containsKey("alerts-common"))
 		{
 			List<String> mobileNumberList = smsReceiver.get("alerts-common");
-			for(String moibleNumer : mobileNumberList)
-			{
-				SmsModel smsmodel = new SmsModel();
-				smsmodel.setPriority(1);
-				smsmodel.setMessage("PING PONG");			
-				smsmodel.setMobile(moibleNumer);
-				smsint.sendMessage(smsmodel);
-			}
+			mobileNumberList.stream().forEach(moibleNumer -> {
+				SmsModel smsmodel = new SmsModel(1,moibleNumer,message);
+				smsint.sendMessage(smsmodel);					
+			});
 		}
 	}
 
