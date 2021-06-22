@@ -1,0 +1,16 @@
+repoName: "alertmanager-webhook"
+dtrNameSpace: "developer"
+environment: "dev"
+stage: "dev"
+kubernetesNamespace: "dev"
+replicas: 1
+javaArguments: "-Xms512m -Xmx512m -Xss512m"
+loop: 1
+thread: 1
+resources:
+  request:
+    memory: 256Mi
+    cpu: 100m
+  limit:
+    memory: 512Mi
+    cpu: 300m

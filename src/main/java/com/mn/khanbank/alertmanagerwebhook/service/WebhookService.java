@@ -16,8 +16,11 @@ import com.mn.khanbank.alertmanagerwebhook.model.AlertWebhookModel;
 import com.mn.khanbank.alertmanagerwebhook.model.SmsModel;
 import com.mn.khanbank.alertmanagerwebhook.restintegration.SmsIntegrationService;
 
+import lombok.extern.slf4j.Slf4j;
+
 
 @Service
+@Slf4j
 public class WebhookService {
 
 	@Autowired
@@ -30,6 +33,7 @@ public class WebhookService {
 		if (smsReceiver.containsKey("alerts-common"))
 		{
 			List<String> mobileNumberList = smsReceiver.get("alerts-common");
+			System.out.println("sendMessageTestSms : mobileNumberList : "+ mobileNumberList);
 			mobileNumberList.stream().forEach(moibleNumer -> {
 				SmsModel smsmodel = new SmsModel(1,moibleNumer,"PING PONG");
 				smsint.sendMessage(smsmodel);					
@@ -45,6 +49,7 @@ public class WebhookService {
 			alertList.stream().forEach(alert -> {
 				String message = alert.getAnnotations().containsKey("summary")?alert.getAnnotations().get("summary"):"Error Occured";
 				List<String> mobileNumberList = smsReceiver.get(receiver);
+				System.out.println("sendMessage : mobileNumberList : "+ mobileNumberList);
 				mobileNumberList.stream().forEach(moibleNumer -> {
 					SmsModel smsmodel = new SmsModel(1,moibleNumer,message);
 					smsint.sendMessage(smsmodel);					

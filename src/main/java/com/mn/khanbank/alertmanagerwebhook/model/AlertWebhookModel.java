@@ -3,8 +3,10 @@ package com.mn.khanbank.alertmanagerwebhook.model;
 import java.util.List;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Data
+@ToString
 public class AlertWebhookModel {
 	
 	private String version;
